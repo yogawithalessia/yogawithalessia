@@ -1,12 +1,12 @@
 # Use DecapBridge PKCE auth (required)
 backend:
   name: git-gateway
-  repo: Markyboy101/yogawithalessia
+  repo: yogawithalessia/yogawithalessia
   branch: main
   auth_type: pkce
   base_url: https://auth.decapbridge.com
-  auth_endpoint: /sites/d7a7731f-e1fd-4779-929c-032a3a9205ac/pkce
-  auth_token_endpoint: /sites/d7a7731f-e1fd-4779-929c-032a3a9205ac/token
+  auth_endpoint: /sites/b95ed993-e5d8-49ee-b203-29ab7e23eb4c/pkce
+  auth_token_endpoint: /sites/b95ed993-e5d8-49ee-b203-29ab7e23eb4c/token
   gateway_url: https://gateway.decapbridge.com
   commit_messages:
     create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
