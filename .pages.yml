@@ -31,6 +31,38 @@ content:
             label: Studio
             type: string
             description: e.g. @within
+  - name: hero
+    label: Homepage Hero Photo
+    description: The big photo at the top of the homepage. Use a landscape photo (wider than tall) - straight from your phone is fine, just turn it sideways.
+    type: file
+    path: assets/hero.json
+    fields:
+      - name: src
+        label: Hero photo
+        type: image
+        description: Landscape only. Portrait photos will crop badly.
+      - name: focus_h
+        label: Where is the subject, left to right?
+        type: select
+        default: 70%
+        options:
+          values:
+            - value: 30%
+              label: Left side of the photo
+            - value: 50%
+              label: Centre
+            - value: 70%
+              label: Right side of the photo
+      - name: focus_v
+        label: Where is the subject, top to bottom?
+        type: select
+        default: 18%
+        options:
+          values:
+            - value: 18%
+              label: Near the top
+            - value: 45%
+              label: Middle
   - name: gallery
     label: Photo Gallery (About page)
     description: Add, remove, or reorder the photos in the About-page gallery. Any photo shape works.
