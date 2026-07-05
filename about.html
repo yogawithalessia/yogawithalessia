@@ -112,7 +112,7 @@
 
   <section class="band cream">
     <div class="container">
-      <div class="gallery">
+      <div class="gallery" id="gallery">
         <img src="assets/alessia-chin-stand.jpg" alt="Alessia in chin stand">
         <img src="assets/alessia-dfd.jpg" alt="Alessia in downward facing dog">
         <img src="assets/alessia-pincha.jpg" alt="Alessia in pincha mayurasana">
@@ -143,5 +143,25 @@
     <p class="acknowledgment">I acknowledge the Traditional Custodians of the land on which I live, teach and practise, the Bunurong People of the Kulin Nation. I pay my respects to Elders past and present, and recognise their enduring connection to Country, community and culture. May we continue to learn from the wisdom of this land and those who have cared for it for countless generations.</p>
   </footer>
 
+  <script>
+    // Renders the About-page gallery from assets/gallery.json (edited via the CMS).
+    // If the file can't load, the static images inside #gallery stay visible.
+    (function () {
+      fetch("assets/gallery.json", { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          var el = document.getElementById("gallery");
+          if (!el || !d || !Array.isArray(d.images)) return;
+          el.innerHTML = d.images.map(function (im) {
+            var src = String(im.src == null ? "" : im.src).replace(/"/g, "");
+            var alt = String(im.alt == null ? "" : im.alt)
+              .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+            return '<img src="' + src + '" alt="' + alt + '">';
+          }).join("");
+        })
+        .catch(function () { /* keep static fallback */ });
+    })();
+  </script>
 </body>
 </html>
