@@ -150,5 +150,25 @@
         .catch(function () { /* keep the static fallback */ });
     })();
   </script>
+  <script>
+    // Renders the hero photo from assets/hero.json (edited via the CMS).
+    // If the file can't load, the CSS default (assets/hero.jpg) stays visible.
+    // NOTE: gradient below mirrors .hero in assets/styles.css — keep in sync.
+    (function () {
+      fetch("assets/hero.json", { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          var el = document.querySelector(".hero");
+          if (!el || !d || !d.src) return;
+          var src = String(d.src).replace(/["'()\s]/g, "");
+          el.style.backgroundImage =
+            "linear-gradient(180deg,rgba(40,32,26,.34) 0%,rgba(40,32,26,.10) 22%,rgba(40,32,26,0) 45%), url(" + src + ")";
+          var h = /^\d{1,3}%$/.test(d.focus_h || "") ? d.focus_h : "50%";
+          var v = /^\d{1,3}%$/.test(d.focus_v || "") ? d.focus_v : "30%";
+          el.style.backgroundPosition = h + " " + v;
+        })
+        .catch(function () { /* keep CSS fallback */ });
+    })();
+  </script>
 </body>
 </html>
