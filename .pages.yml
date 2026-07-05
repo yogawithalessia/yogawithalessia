@@ -1,0 +1,51 @@
+media:
+  input: assets
+  output: assets
+  categories: [ image ]
+
+content:
+  - name: schedule
+    label: Class Schedule
+    description: Edit the studio class times shown on the home page.
+    type: file
+    path: assets/schedule.json
+    fields:
+      - name: title
+        label: Heading
+        type: string
+        default: STUDIO SCHEDULE
+      - name: slots
+        label: Classes
+        type: object
+        list: true
+        fields:
+          - name: day
+            label: Day
+            type: string
+            description: e.g. Mondays
+          - name: time
+            label: Time(s)
+            type: string
+            description: e.g. 9.30am  or  5 + 6.15 + 7.30pm
+          - name: studio
+            label: Studio
+            type: string
+            description: e.g. @within
+  - name: gallery
+    label: Photo Gallery (About page)
+    description: Add, remove, or reorder the photos in the About-page gallery. Any photo shape works.
+    type: file
+    path: assets/gallery.json
+    fields:
+      - name: images
+        label: Images
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Photo
+            type: image
+          - name: alt
+            label: Description (alt text)
+            type: string
+            description: Short description for accessibility, e.g. "Alessia in wheel pose"
