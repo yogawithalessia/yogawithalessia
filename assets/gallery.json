@@ -1,11 +1,14 @@
 {
   "images": [
-    { "src": "assets/alessia-chin-stand.jpg", "alt": "Alessia in chin stand" },
-    { "src": "assets/alessia-dfd.jpg", "alt": "Alessia in downward facing dog" },
-    { "src": "assets/alessia-pincha.jpg", "alt": "Alessia in pincha mayurasana" },
-    { "src": "assets/alessia-paritrik.jpg", "alt": "Alessia in a standing pose" },
-    { "src": "assets/alessia-headstand.jpg", "alt": "Alessia in headstand" },
-    { "src": "assets/alessia-ekapadakoundinyasana.jpg", "alt": "Alessia in eka pada koundinyasana" },
-    { "src": "assets/alessia-wheel.jpg", "alt": "Alessia in wheel pose" }
+    {
+      "src": "assets/1000092931.jpg",
+      "alt": "Alessia prayer"
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
   ]
 }
