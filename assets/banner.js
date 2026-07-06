@@ -12,9 +12,9 @@
     .then(function (d) {
       var b = d && d[key];
       if (!b || !b.src) return;
-      var src = String(b.src).replace(/["'()\s]/g, "");
+      var src = String(b.src).replace(/["\\]/g, "");
       el.classList.add("has-photo");
-      el.style.setProperty("--banner-img", "url(" + src + ")");
+      el.style.setProperty("--banner-img", 'url("' + src + '")');
       var v = /^\d{1,3}%$/.test(b.focus_v || "") ? b.focus_v : "40%";
       el.style.backgroundPosition = "50% " + v;
     })

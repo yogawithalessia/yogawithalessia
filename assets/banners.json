@@ -1,18 +1,7 @@
 {
-  "about": {
-    "src": "assets/WITHIN_APRIL_STUDIOTHERRA-44 copy.jpg",
-    "focus_v": "32%"
-  },
-  "corporate": {
-    "focus_v": "28%"
-  },
-  "private": {
-    "focus_v": "42%"
-  },
-  "contact": {
-    "focus_v": "46%"
-  },
-  "cyclical": {
-    "focus_v": "40%"
-  }
+  "about":    { "src": "/assets/WITHIN_APRIL_STUDIOTHERRA-44 copy.jpg", "focus_v": "32%" },
+  "corporate":{ "src": "/assets/banner-corporate.jpg", "focus_v": "28%" },
+  "private":  { "src": "/assets/banner-private.jpg",   "focus_v": "42%" },
+  "contact":  { "src": "/assets/banner-contact.jpg",   "focus_v": "46%" },
+  "cyclical": { "src": "", "focus_v": "40%" }
 }
