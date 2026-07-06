@@ -1,6 +1,6 @@
 media:
   input: assets
-  output: assets
+  output: /assets
   categories: [ image ]
 
 content:
@@ -95,69 +95,4 @@ content:
             default: 28%
             options:
               values:
-                - { value: 28%, label: Current framing }
-                - { value: 20%, label: Near the top }
-                - { value: 45%, label: Middle }
-                - { value: 60%, label: Lower }
-      - name: private
-        label: Privates + Prenatal page banner
-        type: object
-        fields:
-          - { name: src, label: Photo, type: image, description: "Wide landscape photo. Only a horizontal strip shows." }
-          - name: focus_v
-            label: Where is the subject, top to bottom?
-            type: select
-            default: 42%
-            options:
-              values:
-                - { value: 42%, label: Current framing }
-                - { value: 20%, label: Near the top }
-                - { value: 45%, label: Middle }
-                - { value: 60%, label: Lower }
-      - name: contact
-        label: Contact page banner
-        type: object
-        fields:
-          - { name: src, label: Photo, type: image, description: "Wide landscape photo. Only a horizontal strip shows." }
-          - name: focus_v
-            label: Where is the subject, top to bottom?
-            type: select
-            default: 46%
-            options:
-              values:
-                - { value: 46%, label: Current framing }
-                - { value: 20%, label: Near the top }
-                - { value: 45%, label: Middle }
-                - { value: 60%, label: Lower }
-      - name: cyclical
-        label: Cyclical Practice page banner
-        type: object
-        fields:
-          - { name: src, label: Photo (optional), type: image, description: "Leave empty to keep the plain warm background." }
-          - name: focus_v
-            label: Where is the subject, top to bottom?
-            type: select
-            default: 40%
-            options:
-              values:
-                - { value: 25%, label: Near the top }
-                - { value: 40%, label: Middle }
-                - { value: 55%, label: Lower }
-  - name: gallery
-    label: Photo Gallery (About page)
-    description: Add, remove, or reorder the photos in the About-page gallery. Any photo shape works.
-    type: file
-    path: assets/gallery.json
-    fields:
-      - name: images
-        label: Images
-        type: object
-        list: true
-        fields:
-          - name: src
-            label: Photo
-            type: image
-          - name: alt
-            label: Description (alt text)
-            type: string
-            description: Short description for accessibility, e.g. "Alessia in wheel pose"
+                - { value: 28%,
