@@ -148,7 +148,7 @@
         .then(function (d) {
           var el = document.getElementById("gallery");
           if (!el || !d || !Array.isArray(d.images)) return;
-          el.innerHTML = d.images.map(function (im) {
+          el.innerHTML = d.images.filter(function (im) { return im && im.src; }).map(function (im) {
             var src = String(im.src == null ? "" : im.src).replace(/"/g, "");
             var alt = String(im.alt == null ? "" : im.alt)
               .replace(/&/g, "&amp;").replace(/</g, "&lt;")
