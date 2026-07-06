@@ -288,7 +288,7 @@
   /* Sub-page banner (header photo not captured in archive — warm placeholder) */
   .page-banner{
     position:relative;
-    min-height:360px;
+    min-height:754px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -310,7 +310,7 @@
     text-shadow:0 2px 10px rgba(0,0,0,.35);
   }
   @media (max-width:680px){
-    .page-banner{min-height:280px;}
+    .page-banner{min-height:520px;}
     .page-banner h1{font-size:26px;}
   }
 
